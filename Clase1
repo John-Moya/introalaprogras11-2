@@ -1,0 +1,46 @@
+package libraries;
+
+import javax.naming.InsufficientResourcesException;
+import javax.xml.namespace.QName;
+import javax.swing.JOptionPane;
+
+public class Main {
+
+    public static void main(String[] args) {
+	    //Clase es un conjunto de codigo
+        String name = "Geret Soto Romero" ;
+        int edad1 = 15 ;
+        String direccion = "Coronado, San Jorge";
+        System.out.println( name );
+        System.out.println( edad1 );
+        System.out.println( direccion );
+        JOptionPane.showInternalMessageDialog(null, "Hola con JOption Pane");
+        String nombre2 = JOptionPane.showInputDialog("Ingrese su Nombre: ");
+        String direccion2 = JOptionPane.showInputDialog("Ingrese su direccion: ");
+        String edad2 = JOptionPane.showInputDialog("Ingrese su edad: ");
+        String salario2 = JOptionPane.showInputDialog("Ingrese su Salario: ");
+        JOptionPane.showMessageDialog(null, nombre2 +"  "+ direccion2 +"  "+ edad2+"  "+salario2);
+        //Ejercicio 1
+        int num1 = Integer.parseInt(JOptionPane.showInputDialog("Primer digito a sumar: "));
+        int num2 = Integer.parseInt(JOptionPane.showInputDialog("Segundo digito a sumar: "));
+        int num3 = Integer.parseInt(JOptionPane.showInputDialog("Tercero digito a sumar: "));
+        int num4 = Integer.parseInt(JOptionPane.showInputDialog("Cuarto digito a sumar: "));
+        int suma = num1 + num2 + num3 + num4;
+        int promedio = (suma/4);
+        JOptionPane.showMessageDialog(null, "La suma es: " + suma);
+        JOptionPane.showMessageDialog(null, "El promedio es: " + promedio);
+
+        //Ejercicio 2
+        JOptionPane.showMessageDialog(null, "Hola "+nombre2+", como estás?");
+
+        //Practica de la casa
+        int Salariosmana = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su salario semanal: "));
+        int salariomensual = (Salariosmana * 4);
+        int salaiodeduccion = (int) (salariomensual * 0.934);
+        int deduc = (salariomensual-salaiodeduccion);
+        JOptionPane.showMessageDialog(null, "Estimado trabajador "+nombre2+", el salario de este mes se desglosa de la siguiente manera:");
+        JOptionPane.showMessageDialog(null, "Salario bruto: "+salariomensual);
+        JOptionPane.showMessageDialog(null, "Deducciones: "+deduc);
+        JOptionPane.showMessageDialog(null, "Salario neto: "+salaiodeduccion);
+    }
+}

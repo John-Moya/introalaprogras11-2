@@ -47,9 +47,9 @@ public class Main {
 
         }
 
-// las || es un or
-// && son and
-// ! negacion
+        // las || es un or
+        // && son and
+        // ! negacion
         int provincia;
         provincia = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de provincia"));
         if (provincia == 1) {
